@@ -61,7 +61,8 @@ public class UnsafePropertyNode implements PropertyNode {
             return;
         }
 
-        cb.onSuccess(data.get(id, type));
+        T value = data.get(id, type);
+        cb.onSuccess(value);
     }
 
     @Override
