@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<groupId>de.mxro.promise</groupId>
-	<artifactId>java-promise</artifactId>
-	<version>0.0.2</version>
-	<description>Simply a promise implementation for Java.</description>
-	<url>https://github.com/mxro/promise-java</url>
+	<groupId>de.mxro.async.properties</groupId>
+	<artifactId>async-properties</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<description>Async Properties is a Java library to store and retrieve properties in an asynchronous manner.</description>
+	<url>https://github.com/mxro/async-properties</url>
 	<properties>
 		<module.gwtVersion>2.5.1</module.gwtVersion>
 		<module.importedPackages>
