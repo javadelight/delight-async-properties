@@ -31,4 +31,9 @@ public class ObjectValueData implements Serializable, ObjectValue {
         return type.equals(ObjectValue.class);
     }
 
+    @Override
+    public String toString() {
+        return value + "";
+    }
+
 }
