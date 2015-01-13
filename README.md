@@ -1,6 +1,6 @@
 # Async Properties
 
-Async Properties is a Java library to store and retrieve properties in an asynchronous manner.
+[Async Properties](https://github.com/mxro/async-properties) is a Java library to store and retrieve properties in an asynchronous manner.
 
 ## Usage
 
@@ -79,3 +79,10 @@ This project is compatible with the following environments:
 - GWT 2.5.0+
 - Android (any)
 - OSGi (any)
+
+
+## Further Resources
+
+- [JavaDocs](http://modules.appjangle.com/async-properties/latest/apidocs/)
+- [Project Reports](http://modules.appjangle.com/async-properties/latest/project-reports.html)
+- [Rendered README](http://documentup.com/mxro/async-properties)
