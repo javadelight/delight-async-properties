@@ -11,7 +11,7 @@ import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.helper.PromiseFactory;
 
-public class SynchronizedMetricsNode implements PropertyNode {
+public class SynchronizedPropertyNode implements PropertyNode {
 
     private final PropertyNode decorated;
 
@@ -31,7 +31,7 @@ public class SynchronizedMetricsNode implements PropertyNode {
         this.accessThread.startIfRequired();
     }
 
-    public SynchronizedMetricsNode(final PropertyNode decorated, final AccessThread accessThread,
+    public SynchronizedPropertyNode(final PropertyNode decorated, final AccessThread accessThread,
             final PromiseFactory promiseFactory) {
         super();
         this.decorated = decorated;
