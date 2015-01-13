@@ -6,6 +6,7 @@ import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
+import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.PromisesCommon;
@@ -61,7 +62,11 @@ public class UnsafePropertyNode implements PropertyNode {
             return;
         }
 
-        T value = data.get(id, type);
+        final T value = data.get(id, type);
+        if (value instanceof ObjectValue) {
+            final ObjectValue objectValue = (ObjectValue) value;
+            cb.onSuccess((T) objectValue.value());
+        }
         cb.onSuccess(value);
     }
 
