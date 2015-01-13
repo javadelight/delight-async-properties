@@ -58,7 +58,13 @@ public class UnsafePropertyNode implements PropertyNode {
     @Override
     public <T> void retrieve(final String id, final Class<T> type, final ValueCallback<T> cb) {
         if (type.equals(Object.class)) {
-            cb.onSuccess((T) data.get(id));
+            final Object value = data.get(id);
+            if (value instanceof ObjectValue) {
+                final ObjectValue objectValue = (ObjectValue) value;
+                cb.onSuccess((T) objectValue.value());
+                return;
+            }
+            cb.onSuccess((T) value);
             return;
         }
 
