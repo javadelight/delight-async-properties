@@ -3,6 +3,7 @@ package de.mxro.async.properties.internal;
 import de.mxro.async.Operation;
 import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.async.properties.PropertyData;
+import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.fn.Success;
@@ -19,15 +20,16 @@ import de.mxro.promise.PromisesCommon;
 public class UnsafePropertyNode implements PropertyNode {
 
     private final PropertyData data;
+    private final PropertyFactory factory;
 
     @Override
     public void perform(final PropertyOperation op) {
         op.perform(data);
     }
 
-    public UnsafePropertyNode() {
+    public UnsafePropertyNode(final PropertyFactory factory) {
         super();
-        this.data = new PropertyDataImpl();
+        this.data = new PropertyDataImpl(factory);
     }
 
     @Override

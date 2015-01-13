@@ -18,8 +18,8 @@ import de.mxro.json.internal.JSONImpl;
  */
 public class PropertyDataImpl implements PropertyData, HasJSON {
 
-    Map<String, Object> props;
-    PropertyFactory factory;
+    private final Map<String, Object> props;
+    private final PropertyFactory factory;
 
     @Override
     @SuppressWarnings("unchecked")
@@ -40,8 +40,9 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
         return (T) object;
     }
 
-    public PropertyDataImpl() {
+    public PropertyDataImpl(final PropertyFactory factory) {
         super();
+        this.factory = factory;
         this.props = new HashMap<String, Object>();
     }
 
