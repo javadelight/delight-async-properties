@@ -12,7 +12,7 @@ public class DefaultFactory implements PropertyFactory {
             return (T) new ObjectValueData();
         }
 
-        throw new RuntimeException("Cannot instante property of type [" + type + "]");
+        return null;
     }
 
 }
