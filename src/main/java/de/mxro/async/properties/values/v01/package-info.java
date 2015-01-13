@@ -1,5 +1,5 @@
 /**
- * <p>Versioned package for values.
+ * <p>Versioned package for serializable values.
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
