@@ -47,3 +47,35 @@ System.out.println(props.render().get());
 props.stop().get();
 
 ```
+
+### Maven Dependency
+
+```xml
+<dependency>
+    <groupId>de.mxro.async.properties</groupId>
+	<artifactId>async-properties</artifactId>
+	<version>[latest version]</version>
+</dependency>
+```
+
+Find latest version [here](http://modules.appjangle.com/async-properties/latest/project-summary.html).
+
+Add repository if required:
+
+```xml
+<repositories>
+	<repository>
+		<id>Appjangle Releases</id>
+		<url>http://maven.appjangle.com/appjangle/releases</url>
+	</repository>
+</repositories>
+```
+
+## Compatibility
+
+This project is compatible with the following environments:
+
+- Java 1.6+
+- GWT 2.5.0+
+- Android (any)
+- OSGi (any)
