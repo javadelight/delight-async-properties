@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mxro/async-properties.svg?branch=master)](https://travis-ci.org/mxro/async-properties)
+
 # Async Properties
 
 [Async Properties](https://github.com/mxro/async-properties) is a Java library to store and retrieve properties in an asynchronous manner.
@@ -6,7 +8,7 @@
 
 ### Storing Properties
 
-Properties are set using the `record(operation)` method. Record operations are performed asynchronously. 
+Properties are set using the `record(operation)` method. All operations are performed asynchronously. 
 
 ```java
 PropertyNode props = Properties.create(Properties.defaultFactory());
