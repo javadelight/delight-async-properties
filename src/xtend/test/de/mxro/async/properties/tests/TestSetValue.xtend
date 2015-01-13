@@ -1,7 +1,6 @@
 package de.mxro.async.properties.tests
 
 import de.mxro.async.properties.jre.Properties
-import de.mxro.async.properties.values.ObjectValue
 import de.oehme.xtend.junit.JUnit
 import org.junit.Test
 
