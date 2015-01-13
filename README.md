@@ -17,6 +17,8 @@ props.stop().get();
 
 ### Retrieving Properties
 
+Properties can be retrieved using the `retrieve(key)` method. `retrieve(key)` returns a Promise which must be resolved using `.get()`.
+
 ```java
 PropertyNode props = Properties.create(Properties.defaultFactory());
 
