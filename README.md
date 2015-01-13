@@ -6,6 +6,8 @@ Async Properties is a Java library to store and retrieve properties in an asynch
 
 ### Storing Properties
 
+Properties are set using the `record(operation)` method. Record operations are performed asynchronously. 
+
 ```java
 PropertyNode props = Properties.create(Properties.defaultFactory());
 
@@ -17,7 +19,8 @@ props.stop().get();
 
 ### Retrieving Properties
 
-Properties can be retrieved using the `retrieve(key)` method. `retrieve(key)` returns a Promise which must be resolved using `.get()`.
+Properties can be retrieved using the `retrieve(key)` method. `retrieve(key)` returns a [Promise](http://modules.appjangle.com/java-promise/latest/apidocs/de/mxro/promise/Promise.html)
+ which must be resolved using `.get()`.
 
 ```java
 PropertyNode props = Properties.create(Properties.defaultFactory());
