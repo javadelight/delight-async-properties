@@ -9,6 +9,12 @@ package de.mxro.async.properties;
  */
 public interface PropertyFactory {
 
+    /**
+     * Creates a property of the specified type.
+     * 
+     * @param type
+     * @return
+     */
     public <T> T create(Class<T> type);
 
 }
