@@ -10,6 +10,7 @@ package de.mxro.async.properties;
 public interface PropertyOperation {
 
     /**
+     * <p>
      * Performs this operation on a {@link PropertyData} collection.
      * 
      * @param data
