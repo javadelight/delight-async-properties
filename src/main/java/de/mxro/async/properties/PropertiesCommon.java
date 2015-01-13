@@ -18,4 +18,8 @@ public class PropertiesCommon {
         return new UnsafePropertyNode(factory);
     }
 
+    public static PropertyOperation set(final String id, final Object value) {
+
+    }
+
 }
