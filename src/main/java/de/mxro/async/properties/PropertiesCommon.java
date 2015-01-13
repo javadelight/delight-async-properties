@@ -1,6 +1,7 @@
 package de.mxro.async.properties;
 
 import de.mxro.async.properties.internal.UnsafePropertyNode;
+import de.mxro.async.properties.internal.operations.SetValueOperation;
 
 public class PropertiesCommon {
 
@@ -19,7 +20,7 @@ public class PropertiesCommon {
     }
 
     public static PropertyOperation set(final String id, final Object value) {
-
+        return new SetValueOperation(value).setId(id);
     }
 
 }

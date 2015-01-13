@@ -8,6 +8,10 @@ public class ObjectValue implements Serializable {
 
     public Object value;
 
+    public Object value() {
+        return value;
+    }
+
     public ObjectValue() {
         super();
     }
