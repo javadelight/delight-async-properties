@@ -4,6 +4,9 @@ import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.async.properties.jre.Properties;
+import de.mxro.async.properties.values.ObjectValue;
+import de.mxro.fn.Success;
+import de.mxro.promise.Promise;
 import de.oehme.xtend.junit.JUnit;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
@@ -20,6 +23,12 @@ public class TestSetValue {
     final PropertyNode props = Properties.create(_defaultFactory);
     PropertyOperation _set = Properties.set("value", "string");
     props.record(_set);
+    Promise<ObjectValue> _retrieve = props.<ObjectValue>retrieve("value", ObjectValue.class);
+    ObjectValue _get = _retrieve.get();
+    String _value = _get.<String>value(String.class);
+    TestSetValue.<String, String>operator_doubleArrow(_value, "string");
+    Promise<Success> _stop = props.stop();
+    _stop.get();
   }
   
   private static void assertArrayEquals(final Object[] expecteds, final Object[] actuals) {
