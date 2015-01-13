@@ -66,7 +66,9 @@ public class UnsafePropertyNode implements PropertyNode {
         if (value instanceof ObjectValue) {
             final ObjectValue objectValue = (ObjectValue) value;
             cb.onSuccess((T) objectValue.value());
+            return;
         }
+
         cb.onSuccess(value);
     }
 
