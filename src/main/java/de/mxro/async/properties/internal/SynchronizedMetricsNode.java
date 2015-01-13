@@ -20,12 +20,12 @@ public class SynchronizedMetricsNode implements PropertyNode {
     private final PromiseFactory promiseFactory;
 
     @Override
-    public void perform(final PropertyOperation op) {
+    public void record(final PropertyOperation op) {
         accessThread.offer(new Step() {
 
             @Override
             public void process() {
-                decorated.perform(op);
+                decorated.record(op);
             }
         });
         this.accessThread.startIfRequired();

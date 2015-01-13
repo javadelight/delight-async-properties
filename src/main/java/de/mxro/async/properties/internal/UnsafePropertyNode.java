@@ -22,7 +22,7 @@ public class UnsafePropertyNode implements PropertyNode {
     private final PropertyData data;
 
     @Override
-    public void perform(final PropertyOperation op) {
+    public void record(final PropertyOperation op) {
         op.perform(data);
     }
 
