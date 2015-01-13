@@ -2,7 +2,7 @@ package de.mxro.async.properties.values.v01;
 
 import java.io.Serializable;
 
-public class ObjectValue implements Serializable {
+public class ObjectValueData implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -17,7 +17,7 @@ public class ObjectValue implements Serializable {
         return (T) value;
     }
 
-    public ObjectValue() {
+    public ObjectValueData() {
         super();
     }
 

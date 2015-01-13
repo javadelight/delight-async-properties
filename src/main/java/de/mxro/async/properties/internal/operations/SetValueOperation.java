@@ -2,7 +2,7 @@ package de.mxro.async.properties.internal.operations;
 
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.operations.PropertyOperationWithId;
-import de.mxro.async.properties.values.v01.ObjectValue;
+import de.mxro.async.properties.values.v01.ObjectValueData;
 
 public class SetValueOperation extends PropertyOperationWithId {
 
@@ -11,7 +11,7 @@ public class SetValueOperation extends PropertyOperationWithId {
     @Override
     public void perform(final PropertyData data) {
 
-        final ObjectValue valueProp = data.get(id, ObjectValue.class);
+        final ObjectValueData valueProp = data.get(id, ObjectValueData.class);
 
         valueProp.value = value;
 

@@ -21,7 +21,7 @@ public interface PropertyNode {
     public void perform(PropertyOperation op);
 
     /**
-     * Retrieves a metric with a specified type and id.
+     * Retrieves a property with a specified type and id.
      * 
      * @param id
      * @param type
@@ -30,7 +30,7 @@ public interface PropertyNode {
     public <T> Promise<T> retrieve(String id, Class<T> type);
 
     /**
-     * Retrieves a metric with a specified type and id.
+     * Retrieves a property with a specified type and id.
      * 
      * @param id
      * @param type
@@ -40,7 +40,7 @@ public interface PropertyNode {
 
     /**
      * <p>
-     * Retrieves a metric with the specified id.
+     * Retrieves a property with the specified id.
      * 
      * @param id
      * @return
@@ -48,7 +48,7 @@ public interface PropertyNode {
     public Promise<Object> retrieve(String id);
 
     /**
-     * Retrieves a metric with the specified id.
+     * Retrieves a property with the specified id.
      * 
      * @param id
      * @param cb
@@ -65,12 +65,12 @@ public interface PropertyNode {
     public void print();
 
     /**
-     * Returns a {@link String} representation of all metrics.
+     * Returns a {@link String} representation of all properties.
      */
     public Promise<String> render();
 
     /**
-     * Returns a {@link String} representation of all metrics.
+     * Returns a {@link String} representation of all properties.
      */
     public void render(ValueCallback<String> cb);
 }
