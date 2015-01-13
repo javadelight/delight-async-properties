@@ -14,7 +14,7 @@ import de.mxro.promise.Promise;
 public interface PropertyNode {
 
     /**
-     * Records the specified operation for the affected metrics.
+     * Records the specified operation for the affected properties.
      * 
      * @param op
      */
