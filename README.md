@@ -30,13 +30,14 @@ props.stop().get();
 
 ### Rendering All Properties
 
+Renders all properties in a human-readable JSON representation.
 
 ```java
 PropertyNode props = Properties.create(Properties.defaultFactory());
 
 props.record(Properties.set("key", "value"));
 
-Syso
+System.out.println(props.render().get());
 
 props.stop().get();
 
