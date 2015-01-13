@@ -85,4 +85,7 @@ This project is compatible with the following environments:
 
 - [JavaDocs](http://modules.appjangle.com/async-properties/latest/apidocs/)
 - [Project Reports](http://modules.appjangle.com/async-properties/latest/project-reports.html)
-- [Rendered README](http://documentup.com/mxro/async-properties)
+- [README with TOC](http://documentup.com/mxro/async-properties)
+
+[![Documentation Status](https://readthedocs.org/projects/async-properties/badge/?version=latest)](https://readthedocs.org/projects/async-properties/?badge=latest)
+  
