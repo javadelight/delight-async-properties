@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
+import de.mxro.async.properties.values.PropertyValue;
 import de.mxro.json.HasJSON;
 import de.mxro.json.JSON;
 import de.mxro.json.internal.JSONImpl;
@@ -32,12 +33,21 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
             return (T) newEntry;
         }
 
-        if (!(object.getClass().equals(type))) {
-            throw new RuntimeException("Id " + id + " is assigned the incompatible property type [" + object.getClass()
-                    + "]. Expected: " + type);
+        if (object.getClass().equals(type)) {
+            return (T) object;
         }
 
-        return (T) object;
+        if (object instanceof PropertyValue) {
+            final PropertyValue value = (PropertyValue) object;
+            if (value.is(type)) {
+                return (T) object;
+            }
+
+        }
+
+        throw new RuntimeException("Id " + id + " is assigned the incompatible property type [" + object.getClass()
+                + "]. Expected: " + type);
+
     }
 
     public PropertyDataImpl(final PropertyFactory factory) {
