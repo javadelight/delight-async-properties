@@ -25,4 +25,10 @@ public class ObjectValueData implements Serializable, ObjectValue {
         super();
     }
 
+    @Override
+    public boolean is(final Class<?> type) {
+
+        return type.equals(ObjectValue.class);
+    }
+
 }
