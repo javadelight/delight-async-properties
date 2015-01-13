@@ -8,6 +8,7 @@ public class DefaultFactory implements PropertyFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> T create(final Class<T> type) {
+
         if (type.equals(ObjectValueData.class)) {
             return (T) new ObjectValueData();
         }
