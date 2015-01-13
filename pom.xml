@@ -10,7 +10,7 @@
 			org.junit,
 			*
 		</module.importedPackages>
-		<module.exportedPackages>!de.mxro.promise.internal*,de.mxro.promise*
+		<module.exportedPackages>!de.mxro.async.properties.internal*,de.mxro.async.properties*
 		</module.exportedPackages>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
@@ -188,6 +188,7 @@
 									<link>http://modules.appjangle.com/fn-api/latest/apidocs/</link>
 									<link>http://modules.appjangle.com/async-api/latest/apidocs/</link>
 									<link>http://modules.appjangle.com/concurrency/latest/apidocs/</link>
+									<link>http://modules.appjangle.com/java-promise/latest/apidocs/</link>
 								</links>
 							</configuration>
 						</plugin>
@@ -318,9 +319,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@github.com:mxro/java-json.git</connection>
-		<url>https://github.com/mxro/java-json</url>
-		<developerConnection>scm:git:git@github.com:mxro/java-json.git
+		<connection>scm:git:git@github.com:mxro/async-properties.git</connection>
+		<url>https://github.com/mxro/async-properties</url>
+		<developerConnection>scm:git:git@github.com:mxro/async-properties.git
 		</developerConnection>
 	</scm>
 
