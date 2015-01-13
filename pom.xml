@@ -20,9 +20,32 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>de.mxro.async</groupId>
-			<artifactId>async-api</artifactId>
-			<version>0.0.8</version>
+			<groupId>de.mxro.factories</groupId>
+			<artifactId>factories</artifactId>
+			<version>0.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>de.mxro.json</groupId>
+			<artifactId>java-json</artifactId>
+			<version>0.0.2</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>concurrency-api</artifactId>
+			<groupId>de.mxro.concurrency</groupId>
+			<version>0.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.mxro.promise</groupId>
+			<artifactId>java-promise</artifactId>
+			<version>0.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.mxro.fn</groupId>
+			<artifactId>fn-api</artifactId>
+			<version>0.0.6</version>
 		</dependency>
 
 		<dependency>
