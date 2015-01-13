@@ -22,11 +22,22 @@ PropertyNode props = Properties.create(Properties.defaultFactory());
 
 props.record(Properties.set("key", "value"));
 
-props
+System.out.println(props.retrieve("key").get());
 
 props.stop().get();
 
 ```
 
-
 ### Rendering All Properties
+
+
+```java
+PropertyNode props = Properties.create(Properties.defaultFactory());
+
+props.record(Properties.set("key", "value"));
+
+Syso
+
+props.stop().get();
+
+```

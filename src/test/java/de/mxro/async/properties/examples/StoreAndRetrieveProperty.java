@@ -13,6 +13,8 @@ public class StoreAndRetrieveProperty {
 
         System.out.println(props.retrieve("key").get());
 
+        System.out.println(props.render().get());
+
         props.stop().get();
 
     }
