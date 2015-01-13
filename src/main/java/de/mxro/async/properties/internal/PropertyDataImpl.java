@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
+import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.async.properties.values.PropertyValue;
 import de.mxro.json.HasJSON;
 import de.mxro.json.JSON;
@@ -40,7 +41,16 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
         if (object instanceof PropertyValue) {
             final PropertyValue value = (PropertyValue) object;
             if (value.is(type)) {
-                return (T) object;
+                return (T) value;
+            }
+
+            if (value instanceof ObjectValue) {
+                final ObjectValue objectValue = (ObjectValue) value;
+
+                if (type.equals(objectValue.value().getClass())) {
+                    return (T) objectValue;
+                }
+
             }
 
         }

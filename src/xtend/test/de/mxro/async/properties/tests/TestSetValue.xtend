@@ -15,7 +15,8 @@ class TestSetValue {
 		
 		props.record(Properties.set("value", "string"))
 		
-		props.retrieve("value", ObjectValue).get.value(String) => "string"
+		props.retrieve("value", String).get => "string"
+		props.retrieve("value").get => "string"
 		
 		props.stop.get 
 		

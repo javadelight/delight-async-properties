@@ -4,7 +4,6 @@ import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.async.properties.jre.Properties;
-import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.oehme.xtend.junit.JUnit;
@@ -23,10 +22,12 @@ public class TestSetValue {
     final PropertyNode props = Properties.create(_defaultFactory);
     PropertyOperation _set = Properties.set("value", "string");
     props.record(_set);
-    Promise<ObjectValue> _retrieve = props.<ObjectValue>retrieve("value", ObjectValue.class);
-    ObjectValue _get = _retrieve.get();
-    String _value = _get.<String>value(String.class);
-    TestSetValue.<String, String>operator_doubleArrow(_value, "string");
+    Promise<String> _retrieve = props.<String>retrieve("value", String.class);
+    String _get = _retrieve.get();
+    TestSetValue.<String, String>operator_doubleArrow(_get, "string");
+    Promise<Object> _retrieve_1 = props.retrieve("value");
+    Object _get_1 = _retrieve_1.get();
+    TestSetValue.<Object, String>operator_doubleArrow(_get_1, "string");
     Promise<Success> _stop = props.stop();
     _stop.get();
   }
