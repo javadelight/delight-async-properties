@@ -1,6 +1,5 @@
 package de.mxro.async.properties.internal;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import de.mxro.async.properties.PropertyFactory;
@@ -23,9 +22,9 @@ public class CompositeFactory implements PropertyFactory {
         throw new RuntimeException("Cannot instante property of type [" + type + "]");
     }
 
-    public CompositeFactory() {
+    public CompositeFactory(final List<PropertyFactory> factories) {
         super();
-        this.factories = new LinkedList<PropertyFactory>();
+        this.factories = factories;
     }
 
 }
