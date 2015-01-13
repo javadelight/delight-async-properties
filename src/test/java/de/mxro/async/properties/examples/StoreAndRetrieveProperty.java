@@ -11,7 +11,7 @@ public class StoreAndRetrieveProperty {
 
         props.record(Properties.set("key", "value"));
 
-        props.print();
+        System.out.println(props.retrieve("key").get());
 
         props.stop().get();
 

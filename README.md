@@ -7,11 +7,26 @@ Async Properties is a Java library to store and retrieve properties in an asynch
 ### Storing Properties
 
 ```java
+PropertyNode props = Properties.create(Properties.defaultFactory());
 
+props.record(Properties.set("key", "value"));
+
+props.stop().get();
 
 ```
 
 ### Retrieving Properties
+
+```java
+PropertyNode props = Properties.create(Properties.defaultFactory());
+
+props.record(Properties.set("key", "value"));
+
+props
+
+props.stop().get();
+
+```
 
 
 ### Rendering All Properties
