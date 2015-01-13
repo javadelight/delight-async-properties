@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import de.mxro.async.properties.PropertyData;
+import de.mxro.async.properties.PropertyFactory;
 import de.mxro.json.HasJSON;
 import de.mxro.json.JSON;
 import de.mxro.json.internal.JSONImpl;
-import de.mxro.metrics.internal.MetricsFactory;
 
 /**
  * 
@@ -19,6 +19,7 @@ import de.mxro.metrics.internal.MetricsFactory;
 public class PropertyDataImpl implements PropertyData, HasJSON {
 
     Map<String, Object> props;
+    PropertyFactory factory;
 
     @Override
     @SuppressWarnings("unchecked")
@@ -26,7 +27,7 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
         final Object object = props.get(id);
 
         if (object == null) {
-            final Object newEntry = new MetricsFactory().create(type);
+            final Object newEntry = factory.create(type);
             props.put(id, newEntry);
             return (T) newEntry;
         }
