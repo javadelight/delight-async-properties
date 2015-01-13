@@ -12,6 +12,10 @@ public class ObjectValue implements Serializable {
         return value;
     }
 
+    public <T> T value(final Class<T> ofType) {
+        return (T) value;
+    }
+
     public ObjectValue() {
         super();
     }
