@@ -20,7 +20,6 @@ import de.mxro.promise.PromisesCommon;
 public class UnsafePropertyNode implements PropertyNode {
 
     private final PropertyData data;
-    private final PropertyFactory factory;
 
     @Override
     public void perform(final PropertyOperation op) {
@@ -30,6 +29,7 @@ public class UnsafePropertyNode implements PropertyNode {
     public UnsafePropertyNode(final PropertyFactory factory) {
         super();
         this.data = new PropertyDataImpl(factory);
+
     }
 
     @Override
