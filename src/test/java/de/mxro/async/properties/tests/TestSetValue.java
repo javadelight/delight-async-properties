@@ -20,8 +20,8 @@ public class TestSetValue {
   public void test() {
     PropertyFactory _defaultFactory = Properties.defaultFactory();
     final PropertyNode props = Properties.create(_defaultFactory);
-    PropertyOperation _set = Properties.set("value", "string");
-    props.record(_set);
+    PropertyOperation<Object> _set = Properties.set("value", "string");
+    props.<Object>record(_set);
     Promise<String> _retrieve = props.<String>retrieve("value", String.class);
     String _get = _retrieve.get();
     TestSetValue.<String, String>operator_doubleArrow(_get, "string");

@@ -31,7 +31,7 @@ public class PropertiesCommon {
      * @param value
      * @return
      */
-    public static PropertyOperation set(final String id, final Object value) {
+    public static PropertyOperation<Object> set(final String id, final Object value) {
         return new SetValueOperation(value).setId(id);
     }
 
@@ -41,7 +41,7 @@ public class PropertiesCommon {
      * @param id
      * @return
      */
-    public static PropertyOperation remove(final String id) {
+    public static PropertyOperation<Object> remove(final String id) {
         return new ClearOperation().setId(id);
     }
 
