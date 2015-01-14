@@ -18,7 +18,7 @@ public interface PropertyNode {
      * 
      * @param op
      */
-    public void record(PropertyOperation op);
+    public <R> Promise<R> record(PropertyOperation<R> op);
 
     /**
      * Retrieves a property with a specified type and id.

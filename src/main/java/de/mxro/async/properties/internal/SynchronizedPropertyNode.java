@@ -20,7 +20,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
     private final PromiseFactory promiseFactory;
 
     @Override
-    public void record(final PropertyOperation op) {
+    public <R> Promise<R> record(final PropertyOperation<R> op) {
         accessThread.offer(new Step() {
 
             @Override

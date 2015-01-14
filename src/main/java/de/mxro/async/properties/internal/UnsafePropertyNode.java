@@ -23,8 +23,23 @@ public class UnsafePropertyNode implements PropertyNode {
     private final PropertyData data;
 
     @Override
-    public void record(final PropertyOperation op) {
-        op.perform(data);
+    public <R> Promise<R> record(final PropertyOperation<R> op) {
+
+        return PromisesCommon.createUnsafe(new Operation<R>() {
+
+            @Override
+            public void apply(final ValueCallback<R> callback) {
+                final R res;
+                try {
+                    res = op.perform(data);
+                } catch (final Throwable t) {
+                    callback.onFailure(t);
+                    return;
+                }
+                callback.onSuccess(res);
+            }
+        });
+
     }
 
     public UnsafePropertyNode(final PropertyFactory factory) {
