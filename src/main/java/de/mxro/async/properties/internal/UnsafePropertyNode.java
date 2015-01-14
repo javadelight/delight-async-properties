@@ -7,6 +7,7 @@ import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.async.properties.values.ObjectValue;
+import de.mxro.fn.Closure;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.PromisesCommon;
@@ -25,7 +26,7 @@ public class UnsafePropertyNode implements PropertyNode {
     @Override
     public <R> Promise<R> record(final PropertyOperation<R> op) {
 
-        return PromisesCommon.createUnsafe(new Operation<R>() {
+        final Promise<R> promise = PromisesCommon.createUnsafe(new Operation<R>() {
 
             @Override
             public void apply(final ValueCallback<R> callback) {
@@ -39,6 +40,15 @@ public class UnsafePropertyNode implements PropertyNode {
                 callback.onSuccess(res);
             }
         });
+        promise.get(new Closure<R>() {
+
+            @Override
+            public void apply(final R o) {
+
+            }
+        });
+
+        return promise;
 
     }
 
