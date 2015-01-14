@@ -7,6 +7,7 @@ import de.mxro.async.properties.values.v01.ObjectValueData;
 public class SetValueOperation extends PropertyOperationWithId<Object> {
 
     private final Object value;
+    private final boolean overwrite;
 
     @Override
     public Object perform(final PropertyData data) {
@@ -19,9 +20,11 @@ public class SetValueOperation extends PropertyOperationWithId<Object> {
 
     }
 
-    public SetValueOperation(final Object value) {
+    public SetValueOperation(final Object value, final boolean overwrite) {
         super();
         this.value = value;
+        this.overwrite = overwrite;
+
     }
 
 }
