@@ -7,6 +7,8 @@ import de.mxro.async.properties.internal.SynchronizedPropertyNode;
 import de.mxro.concurrency.jre.ConcurrencyJre;
 import de.mxro.concurrency.schedule.AccessThread;
 import de.mxro.concurrency.schedule.BetterAccessThreadImplementation;
+import de.mxro.factories.Dependencies;
+import de.mxro.factories.Factory;
 import de.mxro.promise.jre.Promises;
 
 /**
@@ -29,6 +31,12 @@ public class Properties extends PropertiesCommon {
 
         return new SynchronizedPropertyNode(createUnsafe(factory), accessThread, Promises.factory());
 
+    }
+
+    public static Factory<?, ?, ?> createPropertiesFactory() {
+        return new Factory<PropertyNode, Configuration, Dependencies>() {
+
+        };
     }
 
 }
