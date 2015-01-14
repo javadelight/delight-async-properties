@@ -73,4 +73,12 @@ public interface PropertyNode {
      * Returns a {@link String} representation of all properties.
      */
     public void render(ValueCallback<String> cb);
+
+    /**
+     * <p>
+     * Accesses the data of this node in an unsafe (non-synchronzied) way.
+     * 
+     * @return
+     */
+    public PropertyData getDataUnsafe();
 }
