@@ -7,6 +7,7 @@ import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.concurrency.schedule.AccessThread;
 import de.mxro.concurrency.schedule.Step;
+import de.mxro.fn.Fn;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.helper.PromiseFactory;
@@ -22,7 +23,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
     @Override
     public <R> Promise<R> record(final PropertyOperation<R> op) {
 
-        Promise<R> promise = promiseFactory.promise(new Operation<R>() {
+        final Promise<R> promise = promiseFactory.promise(new Operation<R>() {
 
             @Override
             public void apply(final ValueCallback<R> callback) {
@@ -36,6 +37,9 @@ public class SynchronizedPropertyNode implements PropertyNode {
                 accessThread.startIfRequired();
             }
         });
+
+        promise.get(Fn.emptyClosure());
+
         return promise;
 
     }
