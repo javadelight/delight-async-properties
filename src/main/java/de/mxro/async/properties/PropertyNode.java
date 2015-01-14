@@ -33,7 +33,8 @@ public interface PropertyNode {
      * <p>
      * Retrieves a property with a specified type and id.
      * <p>
-     * If the property node is thread-safe, f
+     * If the property node is thread-safe, the callback will be executed within
+     * a thread, which allows thread-safe access to the property.
      * 
      * @param id
      * @param type
@@ -51,7 +52,11 @@ public interface PropertyNode {
     public Promise<Object> retrieve(String id);
 
     /**
+     * <p>
      * Retrieves a property with the specified id.
+     * <p>
+     * If the property node is thread-safe, the callback will be executed within
+     * a thread, which allows thread-safe access to the property.
      * 
      * @param id
      * @param cb
