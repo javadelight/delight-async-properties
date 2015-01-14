@@ -21,14 +21,22 @@ public class SynchronizedPropertyNode implements PropertyNode {
 
     @Override
     public <R> Promise<R> record(final PropertyOperation<R> op) {
-        accessThread.offer(new Step() {
+
+        return promiseFactory.promise(new Operation<R>() {
 
             @Override
-            public void process() {
-                decorated.record(op);
+            public void apply(final ValueCallback<R> callback) {
+                accessThread.offer(new Step() {
+
+                    @Override
+                    public void process() {
+                        decorated.record(op);
+                    }
+                });
+                accessThread.startIfRequired();
             }
         });
-        this.accessThread.startIfRequired();
+
     }
 
     public SynchronizedPropertyNode(final PropertyNode decorated, final AccessThread accessThread,
