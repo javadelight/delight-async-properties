@@ -77,17 +77,17 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
 
     @Override
     public String toString() {
-        return getJSON().render();
+        return toJSON().render();
     }
 
     @Override
-    public JSON getJSON() {
+    public JSON toJSON() {
         final JSONObject o = JSON.create();
 
         for (final Entry<String, Object> e : props.entrySet()) {
             Object value;
             if (e.getValue() instanceof ToJSON) {
-                value = ((ToJSON) e.getValue()).getJSON();
+                value = ((ToJSON) e.getValue()).toJSON();
             } else {
                 value = e.getValue();
             }
