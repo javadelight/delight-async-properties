@@ -7,7 +7,7 @@ import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.concurrency.schedule.AccessThread;
 import de.mxro.concurrency.schedule.Step;
-import de.mxro.fn.Fn;
+import de.mxro.fn.Closure;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.helper.PromiseFactory;
@@ -38,7 +38,13 @@ public class SynchronizedPropertyNode implements PropertyNode {
             }
         });
 
-        promise.get(Fn.emptyClosure());
+        promise.get(new Closure<R>() {
+
+            @Override
+            public void apply(final R o) {
+
+            }
+        });
 
         return promise;
 
