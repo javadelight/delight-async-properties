@@ -44,7 +44,7 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
 
         if (object instanceof ExplicitInstanceOf) {
             final ExplicitInstanceOf value = (ExplicitInstanceOf) object;
-            if (value.is(type)) {
+            if (value.instanceOf(type)) {
                 return (T) value;
             }
 

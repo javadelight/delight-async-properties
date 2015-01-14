@@ -9,6 +9,13 @@ package de.mxro.async.properties.values;
  */
 public interface ExplicitInstanceOf {
 
-    public boolean is(Class<?> type);
+    /**
+     * <p>
+     * Should return true if this object is assignable to the defined type.
+     * 
+     * @param type
+     * @return
+     */
+    public boolean instanceOf(Class<?> type);
 
 }

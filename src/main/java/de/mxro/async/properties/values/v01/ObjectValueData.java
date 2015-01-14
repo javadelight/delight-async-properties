@@ -27,11 +27,11 @@ public class ObjectValueData implements Serializable, ObjectValue {
     }
 
     @Override
-    public boolean is(final Class<?> type) {
+    public boolean instanceOf(final Class<?> type) {
 
         if (value instanceof ExplicitInstanceOf) {
             final ExplicitInstanceOf propertyValue = (ExplicitInstanceOf) value;
-            if (propertyValue.is(type)) {
+            if (propertyValue.instanceOf(type)) {
                 return true;
             }
 
