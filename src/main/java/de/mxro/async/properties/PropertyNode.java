@@ -30,7 +30,10 @@ public interface PropertyNode {
     public <T> Promise<T> retrieve(String id, Class<T> type);
 
     /**
+     * <p>
      * Retrieves a property with a specified type and id.
+     * <p>
+     * If the property node is thread-safe, f
      * 
      * @param id
      * @param type
