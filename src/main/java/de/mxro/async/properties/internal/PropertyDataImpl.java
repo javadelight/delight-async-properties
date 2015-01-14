@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.values.ObjectValue;
-import de.mxro.async.properties.values.PropertyValue;
+import de.mxro.async.properties.values.ExplicitInstanceOf;
 import de.mxro.json.ToJSON;
 import de.mxro.json.JSON;
 import de.mxro.json.JSONObject;
@@ -42,8 +42,8 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
             return (T) object;
         }
 
-        if (object instanceof PropertyValue) {
-            final PropertyValue value = (PropertyValue) object;
+        if (object instanceof ExplicitInstanceOf) {
+            final ExplicitInstanceOf value = (ExplicitInstanceOf) object;
             if (value.is(type)) {
                 return (T) value;
             }

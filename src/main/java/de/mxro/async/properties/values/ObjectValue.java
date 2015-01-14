@@ -6,7 +6,7 @@ package de.mxro.async.properties.values;
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-public interface ObjectValue extends PropertyValue {
+public interface ObjectValue extends ExplicitInstanceOf {
 
     public Object value();
 
