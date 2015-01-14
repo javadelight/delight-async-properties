@@ -22,7 +22,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
     @Override
     public <R> Promise<R> record(final PropertyOperation<R> op) {
 
-        return promiseFactory.promise(new Operation<R>() {
+        Promise<R> promise = promiseFactory.promise(new Operation<R>() {
 
             @Override
             public void apply(final ValueCallback<R> callback) {
@@ -36,6 +36,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
                 accessThread.startIfRequired();
             }
         });
+        return promise;
 
     }
 
