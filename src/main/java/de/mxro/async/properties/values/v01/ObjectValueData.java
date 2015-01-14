@@ -3,6 +3,7 @@ package de.mxro.async.properties.values.v01;
 import java.io.Serializable;
 
 import de.mxro.async.properties.values.ObjectValue;
+import de.mxro.async.properties.values.PropertyValue;
 
 public class ObjectValueData implements Serializable, ObjectValue {
 
@@ -27,6 +28,14 @@ public class ObjectValueData implements Serializable, ObjectValue {
 
     @Override
     public boolean is(final Class<?> type) {
+
+        if (value instanceof PropertyValue) {
+            final PropertyValue propertyValue = (PropertyValue) value;
+            if (propertyValue.is(type)) {
+                return true;
+            }
+
+        }
 
         return type.equals(ObjectValue.class);
     }
