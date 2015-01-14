@@ -42,7 +42,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
 
             @Override
             public void apply(final R o) {
-
+                System.out.println("got");
             }
         });
 
