@@ -5,6 +5,7 @@ import java.util.Arrays;
 import de.mxro.async.properties.internal.CompositeFactory;
 import de.mxro.async.properties.internal.DefaultFactory;
 import de.mxro.async.properties.internal.UnsafePropertyNode;
+import de.mxro.async.properties.internal.operations.ClearOperation;
 import de.mxro.async.properties.internal.operations.SetValueOperation;
 
 public class PropertiesCommon {
@@ -41,7 +42,7 @@ public class PropertiesCommon {
      * @return
      */
     public static PropertyOperation clear(final String id) {
-
+        return new ClearOperation().setId(id);
     }
 
     public static PropertyFactory defaultFactory() {

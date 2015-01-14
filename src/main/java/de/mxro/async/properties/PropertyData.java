@@ -29,6 +29,14 @@ public interface PropertyData {
 
     /**
      * <p>
+     * Removes the property with the specified id.
+     * 
+     * @param id
+     */
+    public void remove(String id);
+
+    /**
+     * <p>
      * Retrieves the property at the specified id.
      * <p>
      * If no property with the specified id exists, returns <code>null</code>.
