@@ -143,4 +143,10 @@ public class UnsafePropertyNode implements PropertyNode {
         cb.onSuccess(data.toString());
     }
 
+    @Override
+    public PropertyData getDataUnsafe() {
+
+        return data;
+    }
+
 }

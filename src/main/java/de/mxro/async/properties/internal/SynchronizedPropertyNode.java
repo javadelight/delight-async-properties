@@ -3,6 +3,7 @@ package de.mxro.async.properties.internal;
 import de.mxro.async.AsyncCommon;
 import de.mxro.async.Operation;
 import de.mxro.async.callbacks.ValueCallback;
+import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.concurrency.schedule.AccessThread;
@@ -31,7 +32,14 @@ public class SynchronizedPropertyNode implements PropertyNode {
 
                     @Override
                     public void process() {
-                        decorated.record(op).apply(callback);
+                        final R res;
+                        try {
+                            res = op.perform(decorated.getDataUnsafe());
+                        } catch (final Throwable t) {
+                            callback.onFailure(t);
+                            return;
+                        }
+                        callback.onSuccess(res);
                     }
                 });
                 accessThread.startIfRequired();
@@ -144,6 +152,11 @@ public class SynchronizedPropertyNode implements PropertyNode {
             }
         });
         this.accessThread.startIfRequired();
+    }
+
+    @Override
+    public PropertyData getDataUnsafe() {
+        return decorated.getDataUnsafe();
     }
 
 }
