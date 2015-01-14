@@ -10,7 +10,7 @@ import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.async.properties.values.PropertyValue;
 import de.mxro.json.HasJSON;
 import de.mxro.json.JSON;
-import de.mxro.json.internal.JSONImpl;
+import de.mxro.json.JSONObject;
 
 /**
  * 
@@ -78,7 +78,7 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
 
     @Override
     public JSON getJSON() {
-        final JSON o = new JSONImpl();
+        final JSONObject o = JSON.create();
 
         for (final Entry<String, Object> e : props.entrySet()) {
             Object value;
