@@ -7,6 +7,9 @@ import de.mxro.async.properties.internal.DefaultFactory;
 import de.mxro.async.properties.internal.UnsafePropertyNode;
 import de.mxro.async.properties.internal.operations.ClearOperation;
 import de.mxro.async.properties.internal.operations.SetValueOperation;
+import de.mxro.factories.Configuration;
+import de.mxro.factories.Dependencies;
+import de.mxro.factories.Factory;
 
 public class PropertiesCommon {
 
@@ -51,6 +54,24 @@ public class PropertiesCommon {
 
     public static PropertyFactory compositeFactory(final PropertyFactory... factories) {
         return new CompositeFactory(Arrays.asList(factories));
+    }
+
+    public static Factory<?, ?, ?> createUnsafePropertiesFactory() {
+        return new Factory<PropertyNode, Configuration, Dependencies>() {
+
+            @Override
+            public boolean canInstantiate(final Configuration conf) {
+
+                return conf instanceof PropertiesConfiguration;
+            }
+
+            @Override
+            public PropertyNode create(final Configuration conf, final Dependencies dependencies) {
+
+                return PropertiesCommon.createUnsafe(defaultFactory());
+            }
+
+        };
     }
 
 }
