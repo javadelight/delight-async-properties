@@ -38,6 +38,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
             }
         });
 
+        System.out.println("schedule get");
         promise.get(new Closure<R>() {
 
             @Override
