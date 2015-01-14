@@ -1,5 +1,11 @@
 package de.mxro.async.properties.tests;
 
+import de.mxro.async.properties.PropertyFactory;
+import de.mxro.async.properties.PropertyNode;
+import de.mxro.async.properties.PropertyOperation;
+import de.mxro.async.properties.jre.Properties;
+import de.mxro.fn.Success;
+import de.mxro.promise.Promise;
 import de.oehme.xtend.junit.JUnit;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
@@ -12,19 +18,18 @@ import org.junit.internal.ArrayComparisonFailure;
 public class TestSetValue {
   @Test
   public void test() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method record is undefined for the type TestSetValue"
-      + "\nThe method get is undefined for the type TestSetValue"
-      + "\nThe method get is undefined for the type TestSetValue"
-      + "\nThe method get is undefined for the type TestSetValue"
-      + "\nInvalid number of arguments. The method retrieve(String, ValueCallback<Object>) is not applicable for the arguments (String)"
-      + "\nInvalid number of arguments. The method stop(ValueCallback<Success>) is not applicable without arguments"
-      + "\nType mismatch: cannot convert from Class<String> to ValueCallback<Object>"
-      + "\nType mismatch: type void is not applicable at this location"
-      + "\nType mismatch: type void is not applicable at this location"
-      + "\nType mismatch: type void is not applicable at this location"
-      + "\n=> cannot be resolved"
-      + "\n=> cannot be resolved");
+    PropertyFactory _defaultFactory = Properties.defaultFactory();
+    final PropertyNode props = Properties.create(_defaultFactory);
+    PropertyOperation<Object> _set = Properties.set("value", "string");
+    props.<Object>record(_set);
+    Promise<String> _retrieve = props.<String>retrieve("value", String.class);
+    String _get = _retrieve.get();
+    TestSetValue.<String, String>operator_doubleArrow(_get, "string");
+    Promise<Object> _retrieve_1 = props.retrieve("value");
+    Object _get_1 = _retrieve_1.get();
+    TestSetValue.<Object, String>operator_doubleArrow(_get_1, "string");
+    Promise<Success> _stop = props.stop();
+    _stop.get();
   }
   
   private static void assertArrayEquals(final Object[] expecteds, final Object[] actuals) {
