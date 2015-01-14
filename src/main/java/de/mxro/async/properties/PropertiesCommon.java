@@ -23,8 +23,25 @@ public class PropertiesCommon {
         return new UnsafePropertyNode(factory);
     }
 
+    /**
+     * Sets the specified property with to the provided value.
+     * 
+     * @param id
+     * @param value
+     * @return
+     */
     public static PropertyOperation set(final String id, final Object value) {
         return new SetValueOperation(value).setId(id);
+    }
+
+    /**
+     * Resets the property with the specified id.
+     * 
+     * @param id
+     * @return
+     */
+    public static PropertyOperation clear(final String id) {
+
     }
 
     public static PropertyFactory defaultFactory() {
