@@ -35,7 +35,7 @@ public class PropertiesCommon {
      * @return
      */
     public static PropertyOperation<Object> set(final String id, final Object value) {
-        return new SetValueOperation(value).setId(id);
+        return new SetValueOperation(value, true).setId(id);
     }
 
     /**
@@ -47,7 +47,7 @@ public class PropertiesCommon {
      * @return
      */
     public static PropertyOperation<Object> setIfNotExists(final String id, final Object value) {
-        return new SetValueOperation(value).setId(id);
+        return new SetValueOperation(value, false).setId(id);
     }
 
     /**

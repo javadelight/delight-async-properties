@@ -12,6 +12,13 @@ public class SetValueOperation extends PropertyOperationWithId<Object> {
     @Override
     public Object perform(final PropertyData data) {
 
+        if (!overwrite) {
+            final Object inDb = data.get(id);
+            if (inDb != null) {
+                return inDb;
+            }
+        }
+
         final ObjectValueData valueProp = data.get(id, ObjectValueData.class);
 
         valueProp.value = value;
