@@ -23,6 +23,10 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
     private final Map<String, Object> props;
     private final PropertyFactory factory;
 
+    public void remove(final String id) {
+        props.remove(id);
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public <T> T get(final String id, final Class<T> type) {
