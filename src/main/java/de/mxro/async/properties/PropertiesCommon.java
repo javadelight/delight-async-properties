@@ -39,6 +39,18 @@ public class PropertiesCommon {
     }
 
     /**
+     * Sets the specified property with to the provided value if the property
+     * doesn't exist.
+     * 
+     * @param id
+     * @param value
+     * @return
+     */
+    public static PropertyOperation<Object> setIfNotExists(final String id, final Object value) {
+        return new SetValueOperation(value).setId(id);
+    }
+
+    /**
      * Resets the property with the specified id.
      * 
      * @param id
