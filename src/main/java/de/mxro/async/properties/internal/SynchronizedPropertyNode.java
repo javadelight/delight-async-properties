@@ -38,12 +38,11 @@ public class SynchronizedPropertyNode implements PropertyNode {
             }
         });
 
-        System.out.println("schedule get");
         promise.get(new Closure<R>() {
 
             @Override
             public void apply(final R o) {
-                System.out.println("got");
+
             }
         });
 
