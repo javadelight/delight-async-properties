@@ -8,7 +8,7 @@ import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.async.properties.values.PropertyValue;
-import de.mxro.json.HasJSON;
+import de.mxro.json.ToJSON;
 import de.mxro.json.JSON;
 import de.mxro.json.JSONObject;
 
@@ -18,7 +18,7 @@ import de.mxro.json.JSONObject;
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-public class PropertyDataImpl implements PropertyData, HasJSON {
+public class PropertyDataImpl implements PropertyData, ToJSON {
 
     private final Map<String, Object> props;
     private final PropertyFactory factory;
@@ -86,8 +86,8 @@ public class PropertyDataImpl implements PropertyData, HasJSON {
 
         for (final Entry<String, Object> e : props.entrySet()) {
             Object value;
-            if (e.getValue() instanceof HasJSON) {
-                value = ((HasJSON) e.getValue()).getJSON();
+            if (e.getValue() instanceof ToJSON) {
+                value = ((ToJSON) e.getValue()).getJSON();
             } else {
                 value = e.getValue();
             }
