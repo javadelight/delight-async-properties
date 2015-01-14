@@ -7,7 +7,7 @@ package de.mxro.async.properties;
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-public interface PropertyOperation {
+public interface PropertyOperation<R> {
 
     /**
      * <p>
@@ -15,6 +15,6 @@ public interface PropertyOperation {
      * 
      * @param data
      */
-    public void perform(PropertyData data);
+    public R perform(PropertyData data);
 
 }
