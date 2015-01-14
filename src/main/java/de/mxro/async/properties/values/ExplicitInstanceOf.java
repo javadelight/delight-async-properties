@@ -3,6 +3,9 @@ package de.mxro.async.properties.values;
 /**
  * <p>
  * Marks a class for which instanceOf can be performed as an explicit operation.
+ * <p>
+ * Useful for environments such as GWT, which don't support isAssignableFrom
+ * during runtime.
  * 
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
