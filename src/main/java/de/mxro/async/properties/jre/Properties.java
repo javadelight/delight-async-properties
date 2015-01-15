@@ -31,7 +31,7 @@ public class Properties extends PropertiesCommon {
     public static PropertyNode create(final PropertyFactory factory) {
         final AccessThread accessThread = new BetterAccessThreadImplementation(ConcurrencyJre.create());
 
-        return new SynchronizedPropertyNode(createUnsafe(factory), accessThread, Promises.factory());
+        return new SynchronizedPropertyNode(createUnsafe(factory), accessThread, Promises.createDirectFactory());
 
     }
 
