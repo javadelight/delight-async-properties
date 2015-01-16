@@ -10,6 +10,8 @@ public class DefaultFactory implements PropertyFactory {
     @Override
     public <T> T create(final Class<T> type) {
 
+        System.out.println("called it");
+
         if (type.equals(ObjectValueData.class)) {
             return (T) new ObjectValueData();
         }
