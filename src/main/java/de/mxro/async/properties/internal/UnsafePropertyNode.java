@@ -1,7 +1,5 @@
 package de.mxro.async.properties.internal;
 
-import de.mxro.async.Operation;
-import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
@@ -11,6 +9,8 @@ import de.mxro.fn.Closure;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
 import de.mxro.promise.PromisesCommon;
+import delight.async.Operation;
+import delight.async.callbacks.ValueCallback;
 
 /**
  * <p>

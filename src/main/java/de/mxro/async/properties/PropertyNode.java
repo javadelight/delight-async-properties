@@ -1,8 +1,8 @@
 package de.mxro.async.properties;
 
-import de.mxro.async.callbacks.ValueCallback;
 import de.mxro.fn.Success;
 import de.mxro.promise.Promise;
+import delight.async.callbacks.ValueCallback;
 
 /**
  * <p>
