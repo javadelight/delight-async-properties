@@ -2,7 +2,7 @@
 <module rename-to='metrics'>
 	
 	<inherits name='de.mxro.concurrency.Concurrency' />
-	<inherits name='de.mxro.async.Async' /> 
+	<inherits name='delight.async.Async' /> 
 	<inherits name="de.mxro.promise.Promise" />
 
 	<!-- Other module inherits -->
