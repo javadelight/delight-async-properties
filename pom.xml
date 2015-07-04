@@ -43,8 +43,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.mxro.fn</groupId>
-			<artifactId>fn-api</artifactId>
+			<groupId>org.javadelight</groupId>
+			<artifactId>delight-functional</artifactId>
 			<version>0.0.7</version>
 		</dependency>
 
