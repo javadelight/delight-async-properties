@@ -20,8 +20,8 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>de.mxro.factories</groupId>
-			<artifactId>factories</artifactId>
+			<groupId>org.javadelight</groupId>
+			<artifactId>delight-factories</artifactId>
 			<version>0.0.3</version>
 		</dependency>
 		<dependency>
