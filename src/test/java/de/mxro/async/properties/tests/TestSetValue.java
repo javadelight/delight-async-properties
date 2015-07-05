@@ -1,11 +1,5 @@
 package de.mxro.async.properties.tests;
 
-import de.mxro.async.properties.PropertyFactory;
-import de.mxro.async.properties.PropertyNode;
-import de.mxro.async.properties.PropertyOperation;
-import de.mxro.async.properties.jre.Properties;
-import de.mxro.fn.Success;
-import de.mxro.promise.Promise;
 import de.oehme.xtend.junit.JUnit;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
@@ -18,18 +12,9 @@ import org.junit.internal.ArrayComparisonFailure;
 public class TestSetValue {
   @Test
   public void test() {
-    PropertyFactory _defaultFactory = Properties.defaultFactory();
-    final PropertyNode props = Properties.create(_defaultFactory);
-    PropertyOperation<Object> _set = Properties.set("value", "string");
-    props.<Object>record(_set);
-    Promise<String> _retrieve = props.<String>retrieve("value", String.class);
-    String _get = _retrieve.get();
-    TestSetValue.<String, String>operator_doubleArrow(_get, "string");
-    Promise<Object> _retrieve_1 = props.retrieve("value");
-    Object _get_1 = _retrieve_1.get();
-    TestSetValue.<Object, String>operator_doubleArrow(_get_1, "string");
-    Promise<Success> _stop = props.stop();
-    _stop.get();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method stop is undefined for the type TestSetValue"
+      + "\nget cannot be resolved");
   }
   
   private static void assertArrayEquals(final Object[] expecteds, final Object[] actuals) {
