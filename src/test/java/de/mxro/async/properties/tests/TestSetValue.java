@@ -1,11 +1,12 @@
 package de.mxro.async.properties.tests;
 
-import de.oehme.xtend.junit.JUnit;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
 import org.hamcrest.Matcher;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
+
+import de.oehme.xtend.junit.JUnit;
 
 @JUnit
 @SuppressWarnings("all")

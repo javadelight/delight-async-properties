@@ -6,11 +6,11 @@ import java.util.Map.Entry;
 
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
-import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.async.properties.values.ExplicitInstanceOf;
-import de.mxro.json.ToJSON;
+import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.json.JSON;
 import de.mxro.json.JSONObject;
+import de.mxro.json.ToJSON;
 
 /**
  * 

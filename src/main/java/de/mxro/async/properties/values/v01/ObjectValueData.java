@@ -2,8 +2,8 @@ package de.mxro.async.properties.values.v01;
 
 import java.io.Serializable;
 
-import de.mxro.async.properties.values.ObjectValue;
 import de.mxro.async.properties.values.ExplicitInstanceOf;
+import de.mxro.async.properties.values.ObjectValue;
 
 public class ObjectValueData implements Serializable, ObjectValue {
 
