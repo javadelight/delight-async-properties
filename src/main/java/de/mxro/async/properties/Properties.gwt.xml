@@ -3,7 +3,7 @@
 	
 	<inherits name='de.mxro.concurrency.Concurrency' />
 	<inherits name='delight.async.Async' /> 
-	<inherits name="de.mxro.promise.Promise" />
+	<inherits name="delight.promise.Promise" />
 
 	<!-- Other module inherits -->
 

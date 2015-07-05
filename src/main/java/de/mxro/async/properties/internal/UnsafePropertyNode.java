@@ -4,14 +4,14 @@ import delight.async.Operation;
 import delight.async.callbacks.ValueCallback;
 import delight.functional.Closure;
 import delight.functional.Success;
+import delight.promise.Promise;
+import delight.promise.PromisesCommon;
 
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.async.properties.values.ObjectValue;
-import de.mxro.promise.Promise;
-import de.mxro.promise.PromisesCommon;
 
 /**
  * <p>

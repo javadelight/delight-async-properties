@@ -2,8 +2,7 @@ package de.mxro.async.properties;
 
 import delight.async.callbacks.ValueCallback;
 import delight.functional.Success;
-
-import de.mxro.promise.Promise;
+import delight.promise.Promise;
 
 /**
  * <p>
