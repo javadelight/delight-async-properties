@@ -1,5 +1,9 @@
 package de.mxro.async.properties;
 
+import delight.factories.Configuration;
+import delight.factories.Dependencies;
+import delight.factories.Factory;
+
 import java.util.Arrays;
 
 import de.mxro.async.properties.internal.CompositeFactory;
@@ -7,9 +11,6 @@ import de.mxro.async.properties.internal.DefaultFactory;
 import de.mxro.async.properties.internal.UnsafePropertyNode;
 import de.mxro.async.properties.internal.operations.ClearOperation;
 import de.mxro.async.properties.internal.operations.SetValueOperation;
-import de.mxro.factories.Configuration;
-import de.mxro.factories.Dependencies;
-import de.mxro.factories.Factory;
 
 public class PropertiesCommon {
 
