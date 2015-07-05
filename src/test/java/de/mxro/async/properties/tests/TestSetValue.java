@@ -1,17 +1,19 @@
 package de.mxro.async.properties.tests;
 
+import delight.functional.Success;
+
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
+import org.hamcrest.Matcher;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.internal.ArrayComparisonFailure;
+
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
 import de.mxro.async.properties.jre.Properties;
 import de.mxro.promise.Promise;
 import de.oehme.xtend.junit.JUnit;
-import delight.functional.Success;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;
-import org.hamcrest.Matcher;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.internal.ArrayComparisonFailure;
 
 @JUnit
 @SuppressWarnings("all")

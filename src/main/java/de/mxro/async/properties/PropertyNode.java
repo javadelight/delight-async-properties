@@ -1,8 +1,9 @@
 package de.mxro.async.properties;
 
-import de.mxro.promise.Promise;
 import delight.async.callbacks.ValueCallback;
 import delight.functional.Success;
+
+import de.mxro.promise.Promise;
 
 /**
  * <p>
