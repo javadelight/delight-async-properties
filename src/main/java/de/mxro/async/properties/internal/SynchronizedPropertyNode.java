@@ -3,6 +3,8 @@ package de.mxro.async.properties.internal;
 import delight.async.AsyncCommon;
 import delight.async.Operation;
 import delight.async.callbacks.ValueCallback;
+import delight.concurrency.schedule.AccessThread;
+import delight.concurrency.schedule.Step;
 import delight.functional.Closure;
 import delight.functional.Success;
 import delight.promise.Promise;
@@ -11,8 +13,6 @@ import delight.promise.helper.PromiseFactory;
 import de.mxro.async.properties.PropertyData;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.PropertyOperation;
-import de.mxro.concurrency.schedule.AccessThread;
-import de.mxro.concurrency.schedule.Step;
 
 public class SynchronizedPropertyNode implements PropertyNode {
 

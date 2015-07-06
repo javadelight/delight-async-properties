@@ -1,5 +1,8 @@
 package de.mxro.async.properties.jre;
 
+import delight.concurrency.jre.ConcurrencyJre;
+import delight.concurrency.schedule.AccessThread;
+import delight.concurrency.schedule.BetterAccessThreadImplementation;
 import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
@@ -10,9 +13,6 @@ import de.mxro.async.properties.PropertiesConfiguration;
 import de.mxro.async.properties.PropertyFactory;
 import de.mxro.async.properties.PropertyNode;
 import de.mxro.async.properties.internal.SynchronizedPropertyNode;
-import de.mxro.concurrency.jre.ConcurrencyJre;
-import de.mxro.concurrency.schedule.AccessThread;
-import de.mxro.concurrency.schedule.BetterAccessThreadImplementation;
 
 /**
  * <p>
