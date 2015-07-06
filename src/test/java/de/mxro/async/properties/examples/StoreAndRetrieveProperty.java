@@ -1,7 +1,7 @@
 package de.mxro.async.properties.examples;
 
-import de.mxro.async.properties.PropertyNode;
-import de.mxro.async.properties.jre.Properties;
+import delight.async.properties.PropertyNode;
+import delight.async.properties.jre.Properties;
 
 public class StoreAndRetrieveProperty {
 

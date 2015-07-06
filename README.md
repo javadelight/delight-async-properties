@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mxro/async-properties.svg?branch=master)](https://travis-ci.org/mxro/async-properties)
+[![Build Status](https://travis-ci.org/javadelight/delight-async-properties.svg)](https://travis-ci.org/javadelight/delight-async-properties)
 
-# Async Properties
+# delight-async-properties
 
-[Async Properties](https://github.com/mxro/async-properties) is a Java library to store and retrieve properties in an asynchronous manner.
+Async Properties is a Java library to store and retrieve properties in an asynchronous manner.
 
 ## Usage
 

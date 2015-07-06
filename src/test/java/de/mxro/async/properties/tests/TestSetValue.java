@@ -1,10 +1,11 @@
 package de.mxro.async.properties.tests;
 
-import de.mxro.async.properties.PropertyFactory;
-import de.mxro.async.properties.PropertyNode;
-import de.mxro.async.properties.PropertyOperation;
-import de.mxro.async.properties.jre.Properties;
 import de.oehme.xtend.junit.JUnit;
+
+import delight.async.properties.PropertyFactory;
+import delight.async.properties.PropertyNode;
+import delight.async.properties.PropertyOperation;
+import delight.async.properties.jre.Properties;
 import delight.functional.Success;
 import delight.promise.Promise;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure0;

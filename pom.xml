@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<groupId>de.mxro.async.properties</groupId>
-	<artifactId>async-properties</artifactId>
+	<groupId>org.javadelight</groupId>
+	<artifactId>delight-async-properties</artifactId>
 	<version>0.0.3</version>
 	<description>Async Properties is a Java library to store and retrieve properties in an asynchronous manner.</description>
 	<url>https://github.com/mxro/async-properties</url>
@@ -10,7 +10,7 @@
 			org.junit,
 			*
 		</module.importedPackages>
-		<module.exportedPackages>!de.mxro.async.properties.internal*,de.mxro.async.properties*
+		<module.exportedPackages>!delight.async.properties.internal*,delight.async.properties*
 		</module.exportedPackages>
 		<module.serviceDefinitions>
 		</module.serviceDefinitions>
