@@ -4,14 +4,13 @@ import delight.async.properties.PropertyData;
 import delight.async.properties.PropertyFactory;
 import delight.async.properties.values.ExplicitInstanceOf;
 import delight.async.properties.values.ObjectValue;
+import delight.json.JSON;
+import delight.json.JSONObject;
+import delight.json.ToJSON;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import de.mxro.json.JSON;
-import de.mxro.json.JSONObject;
-import de.mxro.json.ToJSON;
 
 /**
  * 
