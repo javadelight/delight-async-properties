@@ -115,7 +115,7 @@ public class SynchronizedPropertyNode implements PropertyNode {
 
     @Override
     public void stop(final ValueCallback<Success> cb) {
-        this.accessThread.shutdown(AsyncCommon.wrap(cb));
+        this.accessThread.shutdown(AsyncCommon.asSimpleCallback(cb));
     }
 
     @Override
