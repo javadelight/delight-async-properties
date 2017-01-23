@@ -8,9 +8,10 @@ import delight.json.JSON;
 import delight.json.JSONObject;
 import delight.json.ToJSON;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
  * 
@@ -23,6 +24,7 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
     private final Map<String, Object> props;
     private final PropertyFactory factory;
 
+    @Override
     public void remove(final String id) {
         props.remove(id);
     }
@@ -84,14 +86,19 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
     public JSON toJSON() {
         final JSONObject o = JSON.create();
 
-        for (final Entry<String, Object> e : props.entrySet()) {
+        final ArrayList<String> keys = new ArrayList<String>(props.keySet());
+        Collections.sort(keys);
+
+        for (final String key : keys) {
+
+            final Object valueFromMap = props.get(key);
             Object value;
-            if (e.getValue() instanceof ToJSON) {
-                value = ((ToJSON) e.getValue()).toJSON();
+            if (valueFromMap instanceof ToJSON) {
+                value = ((ToJSON) valueFromMap).toJSON();
             } else {
-                value = e.getValue();
+                value = valueFromMap;
             }
-            o.add(e.getKey(), value);
+            o.add(key, value);
         }
         return o;
     }

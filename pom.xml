@@ -30,10 +30,16 @@
 			<version>0.0.5</version>
 		</dependency>
 
-		<dependency>
+		 <dependency>
 			<artifactId>delight-concurrency</artifactId>
 			<groupId>org.javadelight</groupId>
 			<version>0.0.5</version>
+		</dependency> 
+		
+		<dependency>
+			<groupId>org.javadelight</groupId>
+			<artifactId>delight-scheduler</artifactId>
+			<version>[0.0.1,)</version>
 		</dependency>
 
 		<dependency>

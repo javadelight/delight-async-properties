@@ -6,12 +6,12 @@ import delight.async.properties.PropertyFactory;
 import delight.async.properties.PropertyNode;
 import delight.async.properties.internal.SynchronizedPropertyNode;
 import delight.concurrency.jre.ConcurrencyJre;
-import delight.concurrency.schedule.AccessThread;
-import delight.concurrency.schedule.BetterAccessThreadImplementation;
 import delight.factories.Configuration;
 import delight.factories.Dependencies;
 import delight.factories.Factory;
 import delight.promise.jre.Promises;
+import delight.scheduler.AccessThread;
+import delight.scheduler.BetterAccessThreadImplementation;
 
 /**
  * <p>

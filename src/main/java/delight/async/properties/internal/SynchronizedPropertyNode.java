@@ -6,12 +6,12 @@ import delight.async.callbacks.ValueCallback;
 import delight.async.properties.PropertyData;
 import delight.async.properties.PropertyNode;
 import delight.async.properties.PropertyOperation;
-import delight.concurrency.schedule.AccessThread;
 import delight.concurrency.schedule.Step;
 import delight.functional.Closure;
 import delight.functional.Success;
 import delight.promise.Promise;
 import delight.promise.helper.PromiseFactory;
+import delight.scheduler.AccessThread;
 
 public class SynchronizedPropertyNode implements PropertyNode {
 
