@@ -20,7 +20,7 @@ import delight.scheduler.BetterAccessThreadImplementation;
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-public class Properties extends PropertiesCommon {
+public final class Properties extends PropertiesCommon {
 
     /**
      * Creates a new thread-safe {@link PropertyNode}.
