@@ -4,6 +4,8 @@
 	<inherits name='delight.concurrency.Concurrency' />
 	<inherits name='delight.async.Async' /> 
 	<inherits name="delight.promise.Promise" />
+	
+	<inherits name="delight.scheduler.Module" />
 
 	<!-- Other module inherits -->
 
