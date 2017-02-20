@@ -3,7 +3,7 @@
 	<artifactId>delight-async-properties</artifactId>
 	<version>0.0.5</version>
 	<description>Async Properties is a Java library to store and retrieve properties in an asynchronous manner.</description>
-	<url>https://github.com/javadelight/async-properties</url>
+	<url>https://github.com/javadelight/delight-async-properties</url>
 	<properties>
 		<module.gwtVersion>2.5.1</module.gwtVersion>
 		<module.importedPackages>
