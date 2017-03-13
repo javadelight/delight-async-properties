@@ -87,6 +87,7 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
         final JSONObject o = JSON.create();
 
         final ArrayList<String> keys = new ArrayList<String>(props.keySet());
+
         Collections.sort(keys);
 
         for (final String key : keys) {
