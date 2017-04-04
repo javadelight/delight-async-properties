@@ -48,11 +48,7 @@
 			<version>0.0.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.javadelight</groupId>
-			<artifactId>delight-functional</artifactId>
-			<version>0.0.11</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
