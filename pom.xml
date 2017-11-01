@@ -5,7 +5,7 @@
 	<description>Async Properties is a Java library to store and retrieve properties in an asynchronous manner.</description>
 	<url>https://github.com/javadelight/delight-async-properties</url>
 	<properties>
-		<module.gwtVersion>2.5.1</module.gwtVersion>
+		<module.gwtVersion>2.8.2</module.gwtVersion>
 		<module.importedPackages>
 			org.junit,
 			*
@@ -52,7 +52,7 @@
 
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<artifactId>org.eclipse.xtend.lib.gwt</artifactId>
 			<version>2.13.0</version>
 			<scope>test</scope>
 		</dependency>
