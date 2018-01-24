@@ -9,10 +9,10 @@ public class CompositeFactory implements PropertyFactory {
     private final List<PropertyFactory> factories;
 
     @Override
-    public <T> T create(final Class<T> type) {
+    public <T> T create(String id, final Class<T> type) {
 
         for (final PropertyFactory factory : factories) {
-            final T res = factory.create(type);
+            final T res = factory.create(id, type);
 
             if (res != null) {
                 return res;

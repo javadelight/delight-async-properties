@@ -35,7 +35,7 @@ public class PropertyDataImpl implements PropertyData, ToJSON {
         final Object object = props.get(id);
 
         if (object == null) {
-            final Object newEntry = factory.create(type);
+            final Object newEntry = factory.create(id, type);
             props.put(id, newEntry);
             return (T) newEntry;
         }

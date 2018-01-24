@@ -15,6 +15,6 @@ public interface PropertyFactory {
      * @param type
      * @return
      */
-    public <T> T create(Class<T> type);
+    public <T> T create(String id, Class<T> type);
 
 }
