@@ -33,7 +33,7 @@
 		 <dependency>
 			<artifactId>delight-concurrency</artifactId>
 			<groupId>org.javadelight</groupId>
-			<version>0.0.5</version>
+			<version>0.0.6</version>
 		</dependency> 
 		
 		<dependency>
