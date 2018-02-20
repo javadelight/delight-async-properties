@@ -60,18 +60,10 @@ props.stop().get();
 </dependency>
 ```
 
-Find latest version [here](http://modules.appjangle.com/async-properties/latest/project-summary.html).
+This artifact is available on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cdelight-async-properties) and 
+[BinTray](https://bintray.com/javadelight/javadelight/delight-async-properties).
 
-Add repository if required:
-
-```xml
-<repositories>
-	<repository>
-		<id>Appjangle Releases</id>
-		<url>http://maven.appjangle.com/appjangle/releases</url>
-	</repository>
-</repositories>
-```
+[![Maven Central](https://img.shields.io/maven-central/v/org.javadelight/delight-async-properties.svg)](https://search.maven.org/#search%7Cga%7C1%7Cdelight-async-properties)
 
 ## Compatibility
 
